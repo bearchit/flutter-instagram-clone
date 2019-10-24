@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ProfileShowcase extends StatefulWidget {
@@ -25,8 +26,8 @@ class _ProfileShowcaseState extends State<ProfileShowcase>
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image:
-                    NetworkImage("https://picsum.photos/200?random&t=$index"),
+                image: CachedNetworkImageProvider(
+                    "https://picsum.photos/200?random&t=$index"),
               ),
             ),
           ),
