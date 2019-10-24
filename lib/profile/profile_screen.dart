@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/profile/profile_menu.dart';
 import 'package:instagram_clone/profile/profile_showcase.dart';
@@ -59,7 +60,7 @@ class ProfileScreen extends StatelessWidget {
             Column(
               children: <Widget>[
                 CircularAvatar(
-                  NetworkImage(
+                  CachedNetworkImageProvider(
                     "https://scontent-icn1-1.cdninstagram.com/vp/08206fd8cc81534af5996ae108eaf1d8/5E554F4A/t51.2885-19/11887042_1478995215733921_2100417656_a.jpg?_nc_ht=scontent-icn1-1.cdninstagram.com",
                   ),
                   width: 80.0,
