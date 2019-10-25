@@ -18,7 +18,7 @@ class _ProfileShowcaseState extends State<ProfileShowcase>
   Widget buildPosts(BuildContext context) {
     return DefaultTabController(
       length: 2,
-      child: Row(
+      child: Column(
         children: <Widget>[
           TabBar(
             tabs: <Widget>[
@@ -26,10 +26,11 @@ class _ProfileShowcaseState extends State<ProfileShowcase>
               Icon(Icons.account_box),
             ],
           ),
-          TabBarView(
-            children: <Widget>[
-              Expanded(
-                child: GridView.count(
+          SizedBox(height: 5.0),
+          Expanded(
+            child: TabBarView(
+              children: <Widget>[
+                GridView.count(
                   crossAxisCount: 3,
                   children: List.generate(
                     50,
@@ -47,9 +48,7 @@ class _ProfileShowcaseState extends State<ProfileShowcase>
                     ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: GridView.count(
+                GridView.count(
                   crossAxisCount: 3,
                   children: List.generate(
                     50,
@@ -67,8 +66,8 @@ class _ProfileShowcaseState extends State<ProfileShowcase>
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),
